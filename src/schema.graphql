@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Book {
+  title: String!
+  price: Int!
+}
+
+type Removed {
+  message: String!
+}
+
+type Query {
+  allbook: [Book!]!
+  book(id: Int!): [Book!]!
+}
+
+type Mutation {
+  createBook(createBookInput: CreateBookInput!): [Book!]!
+  updateBook(id: Int!, updateBookInput: UpdateBookInput!): [Book!]!
+  removeBook(id: Int!): [Removed!]!
+}
+
+input CreateBookInput {
+  title: String!
+  price: Int!
+}
+
+input UpdateBookInput {
+  title: String
+  price: Int
+}
